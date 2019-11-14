@@ -1,5 +1,6 @@
 # STARTER PACK FOR NODEJS-EXPRESS PROJECT.
 
+
 ## STEP 1 - initialisation
 
 into terminal
@@ -14,6 +15,7 @@ after that `npm start` only.
 
 Place all node modules into .gitignore file to not include its into commit
 `touch .gitignore`
+
 
 ## STEP 2 - babel
 
@@ -43,6 +45,46 @@ instead of
 
 then
 `npm start` into terminal
+
+
+## STEP 3 - refactoring
+
+Ctrl V
+Change
+`var` to `import` into require command
+`var` to `const`
+
+`''` to `""`
+
+
+## STEP 4 - Library dotenv-extended
+
+`env` Environment variables are a fundamental part of developing with Node.js, allowing your app to behave differently based on the environment you want them to run in.
+This could be on your colleagues’ computers, internal company servers, cloud servers.
+
+dotenv for SV-code.
+
+`npm i dotenv-extended`
+
+into .gitignore
+`.env`
+
+then to make sure it is working, into bin/www add a console.log
+```
+function onListening() {
+    console.log(process.env.PORT);
+```
+
+the into app.js on 1st ligne
+`require("dotenv-extended").load();`
+
+open
+`touch .env`
+
+Write PORT inside
+`PORT=4500`
+
+
 
 
 
